@@ -1,38 +1,107 @@
 .App {
   text-align: center;
+  font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
+  color: #545454;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 22px;
   pointer-events: none;
+  align-self: flex-start;
+  left: 1rem;
+  top: 1rem;
+  position: absolute; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo-subText {
+  height: 3rem;
+  pointer-events: none;
+  align-self: flex-start;
+  left: 12rem;
+  top: 0rem;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*.App-header {
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.refreshBtn {
+  cursor: pointer;
+  align-self: flex-start;
+  height: 43px;
+  right: 0rem;
+  top: 1rem;
+  width: auto;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  background-color: #215184;
+  color: white;
+  border-style: none;
+  border-top-left-radius: 21.5%;
+  border-bottom-left-radius: 21.5%;
+}
+
+.refreshBtn-Icon {
+  padding-left: 1rem;
+}
+
+.yearFilter {
+  cursor: pointer;
+  align-self: flex-start;
+  height: 43px;
+  right: 16rem;
+  top: 5rem;
+  width: auto;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  background-color: #215184;
+  color: white;
+  border-style: none;
+}
+
+.yearSelectIcon {
+  padding-left: 1rem;
+}
+
+.sortList {
+  cursor: pointer;
+  align-self: flex-start;
+  height: 43px;
+  right: 5rem;
+  top: 5rem;
+  width: auto;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  background-color: #215184;
+  color: white;
+  border-style: none;
+}
+
+.bodyImage {
+  pointer-events: none;
+  align-self: flex-start;
+  left: 5rem;
+  top: 6rem;
+  position: absolute; 
+}
+
+.launchList {
+  pointer-events: none;
+  align-self: flex-start;
+  right: 5rem;
+  top: 10rem;
+  position: absolute;
+  width: 727px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #00000025;
 }

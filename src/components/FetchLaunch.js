@@ -1,35 +1,51 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default class FetchLaunch extends React.Component {
-  state = {
-    loading: true,
-    launch: null
-  };
+class App extends Component {
 
-  async componentDidMount() {
-    const url = "https://api.spacexdata.com/v3/launches";
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({ launch: data[0], loading: false });
-    console.log(data);
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+    }
+  }
+
+  componentDidMount() {
+
+    fetch('https://api.spacexdata.com/v3/launches')
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          isLoaded: true,
+          items: json, 
+        })
+      });
   }
 
   render() {
-    if (this.state.loading) {
-      return <div>loading...</div>;
+
+    var { isLoaded, items } = this.state;
+
+    if (!isLoaded) {
+      return (<div>Loading..</div>);
     }
 
-    if (!this.state.launch) {
-        return <div>None Found</div>;
-      }
+    else {
+      return (
+            <div className="App">
+              <ul className="launchList">
+                {items.map(item => (
+                  <li key={item}>
+                    <p>#{item.flight_number} {item.mission_name} {item.rocket.rocket_name} {item.launch_year}</p> 
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+    }
 
-    return (
-      <div className="launchList">
-        <div id="launchNumber">#{this.state.launch.flight_number}</div>
-        <div id="launchName">{this.state.launch.mission_name}</div>
-        <div id="rocketName">{this.state.launch.rocket.rocket_name}</div>
-        <div id="launchYear">{this.state.launch.launch_year}</div>
-      </div>
-    );
-  }
+    
+  };
 }
+
+export default App;

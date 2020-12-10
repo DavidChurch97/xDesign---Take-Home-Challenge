@@ -104,4 +104,41 @@
   height: 80px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px #00000025;
+  font-size: 32px;
 }
+
+#launchNumber {
+  align-self: flex-start;
+  left: 3rem;
+  top: 1.5rem;
+  position: absolute;
+  font-weight: medium 500;
+}
+
+#launchName {
+  align-self: flex-start;
+  left: 15rem;
+  top: 1.5rem;
+  position: absolute;
+  font-weight: medium 700;
+}
+
+#launchYear {
+  align-self: flex-start;
+  right: 2rem;
+  top: 1rem;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#rocketName {
+  align-self: flex-start;
+  right: 2rem;
+  top: 3rem;
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold 700;
+}
+
+

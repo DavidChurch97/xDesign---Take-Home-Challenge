@@ -1,6 +1,7 @@
 import logo from './assets/spacex-logo.png';
 import './App.css';
 import React, { useState } from "react";
+import FetchLaunch from "./components/FetchLaunch";
 
 import refreshIcon from './assets/icon/refresh.png';
 import yearSelectIcon from './assets/icon/select.png';
@@ -43,9 +44,7 @@ function App() {
             <img src={sortIcon} className="sortIcon" alt="refreshIcon" />
           </button>
 
-          <div className="launchList" onLoad={getLaunch}>
-            {launch}
-          </div>
+          <FetchLaunch />
         </div>
       </div>
     </div>

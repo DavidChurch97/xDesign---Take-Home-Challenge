@@ -33,3 +33,8 @@ GitHub - [https://github.com/r-spacex/SpaceX-API](https://github.com/r-spacex/Sp
 Please complete the task using a Git source control tool such as GitHub or Bitbucket. Remember to commit your code regularly. And as your submission, please provide access and the URL to the repository.
 
 Don't worry if you can't complete everything on the list, try your best and feel free to detail what extra things you would have done if time permitted it.
+
+## Thoughts:
+I approached this project with the mind set on getting the base design completed as I knew that wouldn't of been an issue as there was a sketch layout file already provided. Once I had the design down I began working on the API part of the project, as I have never had any experience with working with APIs either in React or base JavaScript this was a new experience, so I was learning as I was developing. I managed to get my code to fetch the full list of launches requested and the details shown in the sketch file however I was unable to get the table loop design to match.
+
+If I managed to spend more time on this I would've spent it looking at how I could set the IDs I created in the CSS to work with the JSON IDs as I was unable to style the text inside the table without it all overlapping each other. I would also spend this time completing the sort/filter as I was unable to add this feature due to spending most of my time in development learning about how to use APIs. 
